@@ -1,5 +1,27 @@
 /* Centered content column (max-width), left-aligned type — yellow / black / white */
 
+:root {
+  /* Sticky header block height — keeps #anchor targets visible below the bar */
+  --site-header-offset: 3.75rem;
+}
+
+@media (max-width: 720px) {
+  :root {
+    /* Logo + wrapped nav + full-width CTA */
+    --site-header-offset: 7.5rem;
+  }
+}
+
+html {
+  scroll-padding-top: var(--site-header-offset);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
 .site-root {
   min-height: 100svh;
   display: flex;
@@ -20,10 +42,11 @@
   max-width: var(--content-max);
   margin-inline: auto;
   padding: 0.65rem var(--page-gutter);
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
-  gap: 0.65rem 1.25rem;
+  column-gap: 1.25rem;
+  row-gap: 0.65rem;
 }
 
 .site-logo {
@@ -41,7 +64,6 @@
 }
 
 .site-nav {
-  flex: 1 1 auto;
   min-width: 0;
 }
 
@@ -72,6 +94,10 @@
 }
 
 @media (max-width: 720px) {
+  .site-header-inner {
+    grid-template-columns: 1fr;
+  }
+
   .site-nav ul {
     width: 100%;
     justify-content: flex-start;
@@ -80,6 +106,7 @@
   .header-cta {
     width: 100%;
     justify-content: center;
+    text-align: center;
   }
 }
 
