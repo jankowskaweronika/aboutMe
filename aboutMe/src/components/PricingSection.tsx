@@ -24,7 +24,12 @@ export function PricingSection() {
             </ul>
             <p className="pricing-price">{pkg.priceFrom}</p>
             {pkg.note ? <p className="pricing-note">{pkg.note}</p> : null}
-            <a className="btn btn-offer" href={pkg.ctaHref}>
+            <a
+              className="btn btn-offer"
+              href={pkg.ctaHref}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               {pkg.ctaLabel}
             </a>
           </article>

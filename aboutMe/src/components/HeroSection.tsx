@@ -13,12 +13,23 @@ export function HeroSection() {
             <p className="hero-role">{siteMeta.roleShort}</p>
             <p className="hero-lead">{heroContent.lead}</p>
             <p className="hero-meta">
-              <a href={`mailto:${siteMeta.email}`}>{siteMeta.email}</a>
+              <a
+                href={siteMeta.emailComposeUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {siteMeta.email}
+              </a>
               <span className="hero-meta-sep">·</span>
               <span>{siteMeta.location}</span>
             </p>
             <div className="hero-actions">
-              <a className="btn btn-primary" href={siteMeta.consultationUrl}>
+              <a
+                className="btn btn-primary"
+                href={siteMeta.consultationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 {heroContent.ctaLabel}
               </a>
             </div>

@@ -8,10 +8,20 @@ export function ContactSection() {
       <p className="contact-lead">{contactContent.lead}</p>
       <p className="contact-trust">{contactContent.trustLine}</p>
       <div className="contact-actions">
-        <a className="btn btn-primary" href={`mailto:${siteMeta.email}`}>
+        <a
+          className="btn btn-primary"
+          href={siteMeta.emailComposeUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {siteMeta.email}
         </a>
-        <a className="btn btn-soft" href={siteMeta.consultationUrl}>
+        <a
+          className="btn btn-soft"
+          href={siteMeta.consultationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Umów rozmowę
         </a>
         <a

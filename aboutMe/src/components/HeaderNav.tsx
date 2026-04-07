@@ -24,7 +24,12 @@ export function HeaderNav() {
             ))}
           </ul>
         </nav>
-        <a className="header-cta btn btn-primary" href={siteMeta.consultationUrl}>
+        <a
+          className="header-cta btn btn-primary"
+          href={siteMeta.consultationUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           {heroContent.ctaLabel}
         </a>
       </div>

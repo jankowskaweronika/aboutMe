@@ -34,6 +34,18 @@ export type PricingPackage = {
   highlighted?: boolean
 }
 
+const CONTACT_EMAIL = 'chomawerka@gmail.com'
+
+/** Opens Gmail “Compose” in the browser (logged-in user). */
+function gmailComposeUrl(to: string, subject?: string): string {
+  const url = new URL('https://mail.google.com/mail/')
+  url.searchParams.set('view', 'cm')
+  url.searchParams.set('fs', '1')
+  url.searchParams.set('to', to)
+  if (subject) url.searchParams.set('su', subject)
+  return url.toString()
+}
+
 export const siteMeta = {
   name: 'Weronika',
   /** Large hero name — can be uppercase styling in CSS */
@@ -41,8 +53,11 @@ export const siteMeta = {
   role: 'Strony internetowe · montaż social media · marka osobista',
   roleShort: 'Strony www · montaż · marka osobista',
   title: 'Weronika — strony i montaż pod Twoją markę',
-  email: 'hello@example.com',
-  consultationUrl: 'mailto:hello@example.com?subject=Konsultacja',
+  email: CONTACT_EMAIL,
+  /** Primary CTA: new message in Gmail to you, with subject preset. */
+  consultationUrl: gmailComposeUrl(CONTACT_EMAIL, 'Konsultacja'),
+  /** Inline email link / contact button: compose to you without a preset subject. */
+  emailComposeUrl: gmailComposeUrl(CONTACT_EMAIL),
   location: 'Lublin · współpraca zdalnie',
   social: {
     instagram: 'https://instagram.com/',
@@ -113,7 +128,7 @@ export const pricingContent = {
       priceFrom: 'od 300 PLN / rolka',
       note: 'Przy serii nagrań — pakiet z rabatem.',
       ctaLabel: 'Zapytaj o wycenę — klik!',
-      ctaHref: `mailto:${siteMeta.email}?subject=Brief%20na%20montaż`,
+      ctaHref: gmailComposeUrl(CONTACT_EMAIL, 'Brief na montaż'),
       highlighted: true,
     },
     {
