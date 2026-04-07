@@ -1,0 +1,56 @@
+:root {
+  --yellow: #ffdd2d;
+  --yellow-hover: #f5d20a;
+  --yellow-soft: #fff9e0;
+  --black: #0a0a0a;
+  --white: #ffffff;
+  --gray: #5a5a5a;
+
+  --bg: var(--white);
+  --text: var(--black);
+  --text-muted: var(--gray);
+  --heading: var(--black);
+  --line: rgba(10, 10, 10, 0.14);
+
+  --font-display: 'Bebas Neue', Impact, sans-serif;
+  --font-sans: 'Source Sans 3', system-ui, sans-serif;
+
+  --page-gutter: clamp(1.25rem, 4vw, 2.75rem);
+  --content-max: 70rem;
+  --read-max: 40rem;
+  --radius: 12px;
+
+  font-family: var(--font-sans);
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100svh;
+  background-color: var(--white);
+}
+
+#root {
+  min-height: 100svh;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
