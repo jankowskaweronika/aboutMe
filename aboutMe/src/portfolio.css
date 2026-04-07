@@ -1,4 +1,4 @@
-/* Left-aligned layout, yellow / black / white — Bebas Neue + Source Sans 3 */
+/* Centered content column (max-width), left-aligned type — yellow / black / white */
 
 .site-root {
   min-height: 100svh;
@@ -18,8 +18,7 @@
 
 .site-header-inner {
   max-width: var(--content-max);
-  margin: 0;
-  margin-right: auto;
+  margin-inline: auto;
   padding: 0.65rem var(--page-gutter);
   display: flex;
   flex-wrap: wrap;
@@ -90,8 +89,7 @@
   flex: 1;
   width: 100%;
   max-width: var(--content-max);
-  margin: 0;
-  margin-right: auto;
+  margin-inline: auto;
   padding: 1.5rem var(--page-gutter) 3rem;
   display: flex;
   flex-direction: column;
@@ -238,19 +236,21 @@
   gap: 0.65rem;
 }
 
-/* Statement: full width, black bar, yellow type */
+/* Statement: edge-to-edge within main (no 100vw — avoids shift & horizontal overflow) */
 .hero-statement {
-  margin-top: 2rem;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  padding: 1.75rem var(--page-gutter);
+  margin-top: 3rem;
+  width: calc(100% + 2 * var(--page-gutter));
+  margin-left: calc(-1 * var(--page-gutter));
+  margin-right: calc(-1 * var(--page-gutter));
+  padding: 2.25rem var(--page-gutter) 2rem;
   background: var(--black);
-  text-align: left;
+  text-align: center;
   border-top: 4px solid var(--yellow);
+  box-sizing: border-box;
 }
 
 .hero-statement-line {
-  margin: 0;
+  margin: 0 auto;
   font-family: var(--font-display);
   font-weight: 400;
   font-size: clamp(1.75rem, 5vw, 2.75rem);
@@ -258,7 +258,7 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--yellow);
-  max-width: var(--content-max);
+  max-width: min(var(--content-max), 100%);
 }
 
 .hero-statement-line + .hero-statement-line {
@@ -818,7 +818,7 @@
   color: var(--text-muted);
   border-top: 1px solid var(--line);
   max-width: var(--content-max);
-  margin-right: auto;
+  margin-inline: auto;
 }
 
 .site-footer p {

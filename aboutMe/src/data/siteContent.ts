@@ -34,7 +34,7 @@ export type PricingPackage = {
   highlighted?: boolean
 }
 
-const CONTACT_EMAIL = 'chomawerka@gmail.com'
+const CONTACT_EMAIL = 'weronikachoma.create@gmail.com'
 
 /** Opens Gmail “Compose” in the browser (logged-in user). */
 function gmailComposeUrl(to: string, subject?: string): string {
@@ -47,18 +47,18 @@ function gmailComposeUrl(to: string, subject?: string): string {
 }
 
 export const siteMeta = {
-  name: 'Weronika',
+  name: 'Weronika Choma',
   /** Large hero name — can be uppercase styling in CSS */
-  displayName: 'Weronika',
+  displayName: 'Weronika Choma',
   role: 'Strony internetowe · montaż social media · marka osobista',
-  roleShort: 'Strony www · montaż · marka osobista',
+  roleShort: 'strony www · montaż · marka osobista',
   title: 'Weronika — strony i montaż pod Twoją markę',
+  location: 'Polska',
   email: CONTACT_EMAIL,
   /** Primary CTA: new message in Gmail to you, with subject preset. */
   consultationUrl: gmailComposeUrl(CONTACT_EMAIL, 'Konsultacja'),
   /** Inline email link / contact button: compose to you without a preset subject. */
   emailComposeUrl: gmailComposeUrl(CONTACT_EMAIL),
-  location: 'Lublin · współpraca zdalnie',
   social: {
     instagram: 'https://instagram.com/',
     instagramHandle: '@twoj_instagram',
@@ -89,7 +89,7 @@ export const aboutContent = {
   headline: 'Działam tak, żebyś mógł/mogła spokojnie pokazać efekt',
   paragraphs: [
     'Zaangażowanie i konkret zamiast pustych obietnic — najpierw słucham, potem proponuję układ strony, styl graficzny i formę treści w social.',
-    'Komunikacja na bieżąco, terminowe oddania i rozwiązania dopasowane do Ciebie, nie do szablons „dla wszystkich”.',
+    'Komunikacja na bieżąco, terminowe oddania i rozwiązania dopasowane do Ciebie, nie do szablonów „dla wszystkich”.',
   ],
 }
 
@@ -202,5 +202,5 @@ export const contactContent = {
   eyebrow: 'Kontakt',
   headline: 'Zróbmy to razem!',
   lead: 'Napisz, czego potrzebujesz — odezwę się z wolnym terminem i kolejnymi krokami.',
-  trustLine: 'Zaufane współprace, konkretne terminy i materials gotowe do publikacji.',
+  trustLine: 'Zaufane współprace, konkretne terminy i materiały gotowe do publikacji.',
 }
