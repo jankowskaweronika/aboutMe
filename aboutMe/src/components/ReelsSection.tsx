@@ -6,10 +6,6 @@ export function ReelsSection() {
     <section id="rolki" className="reels-section">
       <p className="section-eyebrow">Przykładowe wyniki</p>
       <h2 className="section-title-display section-title-display--sm">Rolki i shorty</h2>
-      <p className="section-lead">
-        Najedź lub dotknij — klip się odtwarza. Pod filmem przykładowe statystyki (do podmiany na
-        swoje liczby).
-      </p>
       <div className="reels-grid">
         {reelItems.map((reel) => (
           <ReelCard key={reel.id} reel={reel} />

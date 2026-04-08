@@ -179,22 +179,21 @@ export const portfolioSites: PortfolioSite[] = [
 export const reelItems: ReelItem[] = [
   {
     id: 'r1',
-    title: 'Kampania produktowa',
-    videoSrc: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    statsLabel: 'Wyświetlenia: 24 tys. · zaangażowanie: 7,1% · udostępnienia: 312',
-    posterSrc: 'https://peach.blender.org/wp-content/uploads/title_anouncement.jpg?x11217',
+    title: '',
+    videoSrc: '/oNas.mp4',
+    statsLabel: 'wyświetlenia: 386 tys. · komentarze: 44 · zapisy posta: 142 · zaangażowanie: 8,9%',
   },
   {
     id: 'r2',
-    title: 'Hook edukacyjny',
-    videoSrc: 'https://interactive-examples.mdn.mozilla.net/media/cc0-videos/flower.mp4',
-    statsLabel: 'Wyświetlenia: 18 tys. · zaangażowanie: 5,4% · zapisów: 890',
+    title: '',
+    videoSrc: '/biuroWKamperze.mp4',
+    statsLabel: 'wyświetlenia: 170 tys. · komentarze: 19 · zaangażowanie: 3.86%',
   },
   {
     id: 'r3',
-    title: 'Za kulisami marki',
-    videoSrc: 'https://www.w3schools.com/html/mov_bbb.mp4',
-    statsLabel: 'Wyświetlenia: 41 tys. · zaangażowanie: 8,9% · komentarze: 156',
+    title: '',
+    videoSrc: '/dzienWNorwegii.mp4',
+    statsLabel: 'wyświetlenia: 73 tys. · zaangażowanie: 6.43%',
   },
 ]
 
