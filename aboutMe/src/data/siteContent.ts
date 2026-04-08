@@ -59,10 +59,6 @@ export const siteMeta = {
   consultationUrl: gmailComposeUrl(CONTACT_EMAIL, 'Konsultacja'),
   /** Inline email link / contact button: compose to you without a preset subject. */
   emailComposeUrl: gmailComposeUrl(CONTACT_EMAIL),
-  social: {
-    instagram: 'https://instagram.com/',
-    instagramHandle: '@twoj_instagram',
-  },
 }
 
 export const heroContent = {
@@ -111,7 +107,7 @@ export const pricingContent = {
       ],
       priceFrom: 'od 2 500 PLN',
       note: 'Końcowa kwota zależy od liczby podstron, integracji i treści.',
-      ctaLabel: 'Zapytaj o wycenę — klik!',
+      ctaLabel: 'Zapytaj o wycenę',
       ctaHref: siteMeta.consultationUrl,
     },
     {
@@ -127,7 +123,7 @@ export const pricingContent = {
       ],
       priceFrom: 'od 300 PLN / rolka',
       note: 'Przy serii nagrań — pakiet z rabatem.',
-      ctaLabel: 'Zapytaj o wycenę — klik!',
+      ctaLabel: 'Zapytaj o wycenę',
       ctaHref: gmailComposeUrl(CONTACT_EMAIL, 'Brief na montaż'),
       highlighted: true,
     },
@@ -143,7 +139,7 @@ export const pricingContent = {
       ],
       priceFrom: '350 PLN / 60 min',
       note: 'Możliwość łączenia z realizacją strony lub montażu.',
-      ctaLabel: 'Zapytaj o wycenę — klik!',
+      ctaLabel: 'Zapytaj o wycenę',
       ctaHref: siteMeta.consultationUrl,
     },
   ] satisfies PricingPackage[],

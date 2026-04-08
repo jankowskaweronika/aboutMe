@@ -14,23 +14,7 @@ export function ContactSection() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          {siteMeta.email}
-        </a>
-        <a
-          className="btn btn-soft"
-          href={siteMeta.consultationUrl}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Umów rozmowę
-        </a>
-        <a
-          className="btn btn-soft"
-          href={siteMeta.social.instagram}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {siteMeta.social.instagramHandle}
+          Napisz do mnie
         </a>
       </div>
     </section>
