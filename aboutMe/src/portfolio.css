@@ -247,13 +247,20 @@ html {
   position: absolute;
   inset: 4px;
   border-radius: 50%;
-  display: grid;
   place-items: center;
   font-family: var(--font-display);
   font-size: 3.5rem;
   font-weight: 400;
   color: var(--black);
   background: var(--yellow);
+}
+
+.hero-photo-fallback[hidden] {
+  display: none;
+}
+
+.hero-photo-fallback:not([hidden]) {
+  display: grid;
 }
 
 .hero-actions {

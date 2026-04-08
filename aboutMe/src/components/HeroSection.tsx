@@ -1,6 +1,13 @@
+import { useEffect, useState } from 'react'
 import { heroContent, siteMeta } from '../data/siteContent'
 
 export function HeroSection() {
+  const [photoFailed, setPhotoFailed] = useState(false)
+
+  useEffect(() => {
+    setPhotoFailed(false)
+  }, [heroContent.photoSrc])
+
   return (
     <section id="top" className="hero-section" aria-labelledby="hero-heading">
       <div className="hero-top">
@@ -25,22 +32,20 @@ export function HeroSection() {
           </div>
           <div className="hero-photo-col">
             <div className="hero-photo-ring">
-              <img
-                src={heroContent.photoSrc}
-                alt={heroContent.photoAlt}
-                width={320}
-                height={320}
-                className="hero-photo"
-                loading="eager"
-                decoding="async"
-                onError={(e) => {
-                  const target = e.currentTarget
-                  target.style.display = 'none'
-                  const ph = target.nextElementSibling as HTMLElement | null
-                  if (ph) ph.hidden = false
-                }}
-              />
-              <div className="hero-photo-fallback" hidden aria-hidden="true">
+              {!photoFailed ? (
+                <img
+                  key={heroContent.photoSrc}
+                  src={heroContent.photoSrc}
+                  alt={heroContent.photoAlt}
+                  width={320}
+                  height={320}
+                  className="hero-photo"
+                  loading="eager"
+                  decoding="async"
+                  onError={() => setPhotoFailed(true)}
+                />
+              ) : null}
+              <div className="hero-photo-fallback" hidden={!photoFailed} aria-hidden="true">
                 {siteMeta.name.charAt(0)}
               </div>
             </div>

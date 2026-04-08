@@ -72,7 +72,7 @@ export const heroContent = {
   lead:
     'Łączę projektowanie stron z montażem treści na social media — od layoutu po gotowe rolki. Brief, tempo i estetyka dopasowane pod Twój biznes.',
   ctaLabel: 'Zapytaj o wycenę',
-  photoSrc: '/photo.jpg',
+  photoSrc: `${import.meta.env.BASE_URL}ja.jpg?v=1`,
   photoAlt: 'Zdjęcie profilowe',
 }
 
