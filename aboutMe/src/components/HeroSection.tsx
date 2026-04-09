@@ -1,12 +1,10 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { heroContent, siteMeta } from '../data/siteContent'
 
 export function HeroSection() {
-  const [photoFailed, setPhotoFailed] = useState(false)
-
-  useEffect(() => {
-    setPhotoFailed(false)
-  }, [heroContent.photoSrc])
+  const photoSrc = heroContent.photoSrc
+  const [failedSrc, setFailedSrc] = useState<string | null>(null)
+  const photoFailed = failedSrc === photoSrc
 
   return (
     <section id="top" className="hero-section" aria-labelledby="hero-heading">
@@ -34,15 +32,15 @@ export function HeroSection() {
             <div className="hero-photo-ring">
               {!photoFailed ? (
                 <img
-                  key={heroContent.photoSrc}
-                  src={heroContent.photoSrc}
+                  key={photoSrc}
+                  src={photoSrc}
                   alt={heroContent.photoAlt}
                   width={320}
                   height={320}
                   className="hero-photo"
                   loading="eager"
                   decoding="async"
-                  onError={() => setPhotoFailed(true)}
+                  onError={() => setFailedSrc(photoSrc)}
                 />
               ) : null}
               <div className="hero-photo-fallback" hidden={!photoFailed} aria-hidden="true">
