@@ -20,10 +20,20 @@ export function PortfolioCarousel({ items }: Props) {
               target="_blank"
               rel="noopener noreferrer"
               className="portfolio-card-inner"
-              style={site.previewImage ? undefined : { background: site.cardGradient }}
+              style={{ background: site.cardGradient }}
             >
               {site.previewImage ? (
-                <img src={site.previewImage} alt="" className="portfolio-card-img" />
+                <img
+                  src={site.previewImage}
+                  alt=""
+                  className="portfolio-card-img"
+                  loading="lazy"
+                  decoding="async"
+                  referrerPolicy="no-referrer"
+                  onError={(e) => {
+                    e.currentTarget.style.display = 'none'
+                  }}
+                />
               ) : null}
               <div className="portfolio-card-overlay">
                 <h3>{site.title}</h3>
