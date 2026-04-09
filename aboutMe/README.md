@@ -71,3 +71,24 @@ export default defineConfig([
   },
 ])
 ```
+
+## Deploy to Vercel
+
+### Quick setup
+
+- Import the repository in Vercel.
+- Vercel should auto-detect **Vite**.
+- Build command: `npm run build`
+- Output directory: `dist`
+
+This repo includes `vercel.json` with the recommended defaults.
+
+### Static assets in `public/`
+
+The app references some files from the site root, e.g.:
+
+- `/ja.jpg` (hero photo)
+- `/oNas.mp4`, `/biuroWKamperze.mp4`, `/dzienWNorwegii.mp4` (reels videos)
+- `/dry-brush-stroke-21.png` (background texture in CSS)
+
+They are served from `public/` (so they are available from `/` after build).
